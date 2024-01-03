@@ -2,9 +2,12 @@ package br.com.mutztech.agenda.api.controller;
 
 import br.com.mutztech.agenda.api.mapper.PacienteMapper;
 import br.com.mutztech.agenda.api.request.PacienteRequest;
+import br.com.mutztech.agenda.api.response.AgendaResponse;
 import br.com.mutztech.agenda.api.response.PacienteResponse;
 import br.com.mutztech.agenda.domain.entity.Paciente;
 import br.com.mutztech.agenda.domain.service.PacienteService;
+import br.com.mutztech.agenda.domain.service.impl.PacienteServiceImpl;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +26,7 @@ public class PacienteController {
     private final PacienteMapper mapper;
 
     @PostMapping
-    public ResponseEntity<PacienteResponse> salvar(@RequestBody PacienteRequest request) {
+    public ResponseEntity<PacienteResponse> salvar(@Valid @RequestBody PacienteRequest request) {
         Paciente paciente = mapper.toPaciente(request);
         Paciente pacienteSalvo = service.salvar(paciente);
         PacienteResponse pacienteResponse = mapper.toPacienteResponse(pacienteSalvo);
@@ -63,4 +66,5 @@ public class PacienteController {
         service.deletar(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
 }
