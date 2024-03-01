@@ -13,10 +13,16 @@ public class OpenApiConfig {
 
     @Bean
     public OpenAPI customOpenApi() {
+        Contact contact = new Contact();
+        contact.setName("Jurandir Moura");
+        contact.setEmail("jurandirmoura40@gmail.com");
+        contact.setUrl("https://github.com/jurandirmoura");
+
         return new OpenAPI()
                 .components(new Components())
-                .info(new Info().title("Rest API Agenda")
-                        .description("Rest API Para Agendamentos de Consultas"));
+                .info(new Info()
+                        .title("Rest API Agenda")
+                        .contact(contact).description("Rest API Para Agendamentos de Consultas"));
 
     }
 }
