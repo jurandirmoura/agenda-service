@@ -2,11 +2,9 @@ package br.com.mutztech.agenda.api.controller;
 
 import br.com.mutztech.agenda.api.mapper.PacienteMapper;
 import br.com.mutztech.agenda.api.request.PacienteRequest;
-import br.com.mutztech.agenda.api.response.AgendaResponse;
 import br.com.mutztech.agenda.api.response.PacienteResponse;
 import br.com.mutztech.agenda.domain.entity.Paciente;
 import br.com.mutztech.agenda.domain.service.PacienteService;
-import br.com.mutztech.agenda.domain.service.impl.PacienteServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
