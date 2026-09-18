@@ -75,10 +75,3 @@ A aplicação estará acessível em `http://localhost:8080`.
 
 A aplicação utiliza **Spring Security** para controle de acesso às rotas. Certifique-se de enviar as credenciais/tokens necessários nas requisições para endpoints protegidos.
 
----
-
-## ✒️ Autor
-
-Desenvolvido por **[Seu Nome]**.
-
-Entre em contato via [LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/seu-perfil&utm_source=gemini) ou [E-mail](https://www.google.com/search?q=mailto%3Aseu-email%40dominio.com).
